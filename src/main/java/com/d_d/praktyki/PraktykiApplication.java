@@ -9,21 +9,18 @@ public class PraktykiApplication {
     public static void main(String[] args) {
         SpringApplication.run(PraktykiApplication.class, args);
 
-        String brand;
-        String model;
-        int age;
-        double price;
-
-        brand="Fiat";
-        model = "600e";
-        age=2023;
-        price=170000.00;
-
-        System.out.println("Marka: "+brand);
-        System.out.println("Model: "+model);
-        System.out.println("Rocznik: "+age);
-        System.out.println("Cena: "+price);
-
+        Samochod fiat = new Samochod();
+        fiat.marka="Fiat";
+        fiat.model="900e";
+        fiat.rokProdukcji=2023;
+        System.out.println("Marka: "+fiat.marka);
+        System.out.println("Model: "+fiat.model);
+        System.out.println("Rocznik: "+fiat.rokProdukcji);
     }
 
+}
+class Samochod {
+    String marka;
+    String model;
+    int rokProdukcji;
 }
