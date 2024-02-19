@@ -9,16 +9,15 @@ public class PraktykiApplication {
     public static void main(String[] args) {
         SpringApplication.run(PraktykiApplication.class, args);
 
-        String brand;
-        String model;
-        int age;
-        double price;
-
-        brand = "BWM";
-        model = "M3";
-        age = 2020;
-        price = 199599.99;
-
-        System.out.println("Marka: " + brand + " Model: " + model + " Rocznik: " + age + " Cena: " + price);
+        Samochod dodge = new Samochod();
+        dodge.marka = "Dodge";
+        dodge.model = "Charger SRT";
+        dodge.rokProdukcji = 2022;
+        System.out.println("Twój samochód to: " + dodge.marka + " " + dodge.model + " " + dodge.rokProdukcji);
     }
+}
+class Samochod{
+    String marka;
+    String model;
+    int rokProdukcji;
 }
