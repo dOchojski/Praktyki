@@ -9,10 +9,22 @@ class Samochod {
         System.out.println("- Marka: " + marka);
         System.out.println("- Model: " + model);
         System.out.println("- Rok produkcji: " + rokProdukcji.toString());
+        System.out.println("- Uruchomiony? " + silnikUruchomiony);
     }
+
+    void uruchomSilnik() {
+        silnikUruchomiony = true;
+        System.out.println("Silnik uruchomiony");
+    }
+    void zatrzymajSilnik() {
+        silnikUruchomiony = false;
+        System.out.println("Silnik zatrzymany");
+    }
+
     String marka;
     String model;
     Integer rokProdukcji;
+    boolean silnikUruchomiony;
 }
 
 @SpringBootApplication
@@ -25,6 +37,9 @@ public class PraktykiApplication {
         fiat.marka = "Fiat";
         fiat.model = "Seicento";
         fiat.rokProdukcji = 2005;
+
+        fiat.uruchomSilnik();
+        fiat.zatrzymajSilnik();
 
         fiat.printInfo();
     }
