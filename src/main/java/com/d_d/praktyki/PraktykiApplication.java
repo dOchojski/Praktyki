@@ -16,6 +16,8 @@ public class PraktykiApplication {
         System.out.println("Marka: "+fiat.marka);
         System.out.println("Model: "+fiat.model);
         System.out.println("Rocznik: "+fiat.rokProdukcji);
+        fiat.uruchomSilnik();
+        fiat.zatrzymajSilnik();
     }
 
 }
@@ -23,4 +25,10 @@ class Samochod {
     String marka;
     String model;
     int rokProdukcji;
+    public static void uruchomSilnik(){
+        System.out.println("Silnik uruchomiony");
+    }
+    public static void zatrzymajSilnik(){
+        System.out.println("Silnik zatrzymany");
+    }
 }
