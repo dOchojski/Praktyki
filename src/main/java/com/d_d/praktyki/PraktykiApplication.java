@@ -9,23 +9,36 @@ public class PraktykiApplication {
     public static void main(String[] args) {
         SpringApplication.run(PraktykiApplication.class, args);
 
-        Samochod dodge = new Samochod();
-        dodge.marka = "Dodge";
-        dodge.model = "Charger SRT";
-        dodge.rokProdukcji = 2022;
-        System.out.println("Twój samochód to: " + dodge.marka + " " + dodge.model + " " + dodge.rokProdukcji);
-        dodge.uruchomSilnik();
-        dodge.zatrzymajSilnik();
+        KontoBankowe konto1 = new KontoBankowe();
+        konto1.stanKonta = 56000;
+        konto1.numerKonta = "PL49 1020 2892 2276 3005 0000 0000";
+        konto1.wplacPieniadze(2.50);
+        konto1.wyplacPieniadze(2750.50);
+        konto1.wplacPieniadze(500);
+        konto1.wyplacPieniadze(199.99);
+
+        KontoBankowe konto2 = new KontoBankowe();
+        konto2.stanKonta = 13000;
+        konto2.numerKonta = "PL49 1020 3898 2276 3006 0000 0000";
+        konto2.wplacPieniadze(5000);
+        konto2.wyplacPieniadze(50);
+        konto2.wplacPieniadze(275.42);
+        konto2.wyplacPieniadze(5.99);
+
+        System.out.println("Stan konta pierwszego: " + konto1.stanKonta + " Stan konta drugiego: " + konto2.stanKonta);
     }
 }
-class Samochod{
-    String marka;
-    String model;
-    int rokProdukcji;
-    public static void uruchomSilnik(){
-        System.out.println("Silnik uruchomiony");
+class KontoBankowe{
+    float stanKonta;
+    String numerKonta;
+    public void wplacPieniadze(double kwota)
+    {
+        stanKonta += kwota;
+        System.out.println("Wpłacono: " + kwota);
     }
-    public static void zatrzymajSilnik(){
-        System.out.println("Silnik zatrzymany");
+    public void wyplacPieniadze(double kwota)
+    {
+        stanKonta -= kwota;
+        System.out.println("Wypłacono: " + kwota);
     }
 }
