@@ -16,6 +16,8 @@ public class PraktykiApplication {
 
         KontoBankowe a = new KontoBankowe(adam);
         KontoBankowe b = new KontoBankowe(andrzej);
+
+        // wpłacana/wypłacana kwota nie może być ujemna
         try {
             a.wplacPieniadze(5);
             b.wplacPieniadze(2);
