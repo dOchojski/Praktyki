@@ -1,6 +1,9 @@
 package com.d_d.praktyki;
 
 class Osoba {
+    private String imie;
+    private String nazwisko;
+
     Osoba(String imie, String nazwisko) {
         this.imie = imie;
         this.nazwisko = nazwisko;
@@ -9,7 +12,4 @@ class Osoba {
     public String fullname() {
         return imie + " " + nazwisko;
     }
-
-    private String imie;
-    private String nazwisko;
 }

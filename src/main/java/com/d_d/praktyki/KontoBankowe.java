@@ -3,6 +3,10 @@ package com.d_d.praktyki;
 import java.util.Random;
 
 class KontoBankowe {
+    private double stanKonta;
+    private String numerKonta;
+    private Osoba wlasciciel;
+
     KontoBankowe(Osoba daneOsobowe) {
         Random rand = new Random();
         wlasciciel = daneOsobowe;
@@ -25,8 +29,4 @@ class KontoBankowe {
     void wyswietlSaldo() {
         System.out.println(String.format("Saldo konta %s (%s): %f", numerKonta, wlasciciel.fullname(), stanKonta));
     }
-
-    private double stanKonta;
-    private String numerKonta;
-    private Osoba wlasciciel;
 }
