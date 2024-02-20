@@ -9,7 +9,7 @@ class Empty implements Displayable {
     }
     @Override
     public void onDraw(char[][] frame) {
-        frame[position[0]][position[1]] = '#';
+        frame[position[1]][position[0]] = '#';
     }
 }
 
@@ -21,7 +21,7 @@ public class Display {
     public Display(int width, int height) {
         this.width = width;
         this.height = height;
-        frame = new char[width][height];
+        frame = new char[height][width];
         fillWithEmpty();
     }
     public void displayFrame() {

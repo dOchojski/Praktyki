@@ -10,7 +10,7 @@ public class Dot implements Displayable {
     }
     @Override
     public void onDraw(char frame[][]) {
-        frame[position[0]][position[1]] = '@';
+        frame[position[1]][position[0]] = '@';
     }
     public int getSpeed() {
         return baseSpeed;
