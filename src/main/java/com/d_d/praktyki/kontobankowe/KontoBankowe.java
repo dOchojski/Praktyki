@@ -1,4 +1,4 @@
-package com.d_d.praktyki.KontoBankowe;
+package com.d_d.praktyki.kontobankowe;
 
 import java.util.Random;
 
