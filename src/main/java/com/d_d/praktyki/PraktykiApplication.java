@@ -1,15 +1,9 @@
 package com.d_d.praktyki;
 
+import com.d_d.praktyki.kontobankowe.KontoBankowe;
+import com.d_d.praktyki.kontobankowe.Uzytkownik;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-class Uzytkownik{
-
-    String imie;
-    String nazwisko;
-    String adresZamieszkania;
-    String adresZameldowania;
-}
 
 @SpringBootApplication
 public class PraktykiApplication {
@@ -46,23 +40,5 @@ public class PraktykiApplication {
         konto2.wyplacPieniadze(5.99);
 
         System.out.println("Stan konta pierwszego: " + konto1.stanKonta + " Stan konta drugiego: " + konto2.stanKonta);
-    }
-}
-class KontoBankowe{
-    public KontoBankowe(Uzytkownik uzytkownik){
-        wlasciciel = uzytkownik;
-    }
-    float stanKonta;
-    String numerKonta;
-    Uzytkownik wlasciciel;
-    public void wplacPieniadze(double kwota)
-    {
-        stanKonta += kwota;
-        System.out.println("Wpłacono: " + kwota);
-    }
-    public void wyplacPieniadze(double kwota)
-    {
-        stanKonta -= kwota;
-        System.out.println("Wypłacono: " + kwota);
     }
 }
