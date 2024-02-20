@@ -1,10 +1,10 @@
-package com.d_d.praktyki;
+package com.d_d.praktyki.KontoBankowe;
 
-class Osoba {
+public class Osoba {
     private String imie;
     private String nazwisko;
 
-    Osoba(String imie, String nazwisko) {
+    public Osoba(String imie, String nazwisko) {
         this.imie = imie;
         this.nazwisko = nazwisko;
     }

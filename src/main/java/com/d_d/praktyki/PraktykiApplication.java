@@ -1,9 +1,9 @@
 package com.d_d.praktyki;
 
+import com.d_d.praktyki.KontoBankowe.KontoBankowe;
+import com.d_d.praktyki.KontoBankowe.Osoba;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.Random;
 
 @SpringBootApplication
 public class PraktykiApplication {
