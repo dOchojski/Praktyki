@@ -1,7 +1,5 @@
-package com.d_d.praktyki;
+package com.d_d.praktyki.kontobankowe;
 
-import com.d_d.praktyki.kontobankowe.KontoBankowe;
-import com.d_d.praktyki.kontobankowe.Uzytkownik;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
