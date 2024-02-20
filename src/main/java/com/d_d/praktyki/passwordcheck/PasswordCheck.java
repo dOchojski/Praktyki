@@ -4,14 +4,19 @@ import java.util.regex.Pattern;
 
 public class PasswordCheck {
     private Pattern passwordPattern;
+
+    /**
+     * Sets default regex pattern: Check if password contains letters,
+     * digits and has at least 8 characters.
+     */
     public PasswordCheck() {
-        // check if password:
-        // - contains letters
-        // - contains digits
-        // and match if token has at least 8 chars
         final String regex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
         setPattern(regex);
     }
+    /**
+     * Sets custom regex pattern.
+     * @param regex regular expression to be used in validation.
+     */
     public PasswordCheck(final String regex) {
         setPattern(regex);
     }
