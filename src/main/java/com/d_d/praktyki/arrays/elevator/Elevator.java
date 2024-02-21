@@ -1,13 +1,14 @@
 package com.d_d.praktyki.arrays.elevator;
 
 public class Elevator {
-    private int max_people_amount;
-    private int weightOverload;
-    private Person[] people = new Person[max_people_amount];
+    private final int max_people_amount;
+    private final int weightOverload;
+    private final Person[] people;
     private int people_count = 0;
     public Elevator() { this(4, 400); }
     public Elevator(int max_people, int max_weight) {
         max_people_amount = max_people;
+        people = new Person[max_people_amount];
         weightOverload = max_weight;
     }
     public void add(Person person) {
