@@ -1,27 +1,27 @@
 package com.d_d.praktyki.arrays.elevator;
 
 public class Elevator {
-    private final int max_people_amount;
+    private final int maxPeopleAmount;
     private final int weightOverload;
     private final Person[] people;
-    private int people_count = 0;
+    private int peopleCount = 0;
     public Elevator() { this(4, 400); }
-    public Elevator(int max_people, int max_weight) {
-        max_people_amount = max_people;
-        people = new Person[max_people_amount];
-        weightOverload = max_weight;
+    public Elevator(int maxPeople, int maxWeight) {
+        maxPeopleAmount = maxPeople;
+        people = new Person[maxPeopleAmount];
+        weightOverload = maxWeight;
     }
     public void add(Person person) {
-        if (people_count >= 4) {
-            System.out.println("Too many people, there is no space! Max.: "+max_people_amount);
+        if (peopleCount >= 4) {
+            System.out.println("Too many people, there is no space! Max.: "+ maxPeopleAmount);
             return;
         }
-        people[people_count] = person;
-        people_count++;
+        people[peopleCount] = person;
+        peopleCount++;
     }
     public void start() {
         int totalWeight = 0;
-        for (int i=0; i<people_count; i++) {
+        for (int i = 0; i< peopleCount; i++) {
             totalWeight += people[i].getWeight();
         }
         if (totalWeight >= weightOverload) {
