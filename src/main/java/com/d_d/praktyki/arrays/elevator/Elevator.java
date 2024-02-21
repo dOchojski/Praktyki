@@ -2,7 +2,7 @@ package com.d_d.praktyki.arrays.elevator;
 
 public class Elevator {
     private int max_people_amount;
-    private Person[] people = new Person[4];
+    private Person[] people = new Person[max_people_amount];
     public Elevator() { this(4); }
     public Elevator(int max_people) {
         max_people_amount = max_people;
