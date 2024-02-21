@@ -1,10 +1,11 @@
 package com.d_d.praktyki.arrays.elevator;
 
 public class Person {
-    private final String name;
-    private final int weight;
-    private final int index;
+    private String name;
+    private int weight;
+    private int index;
     private static int auto_increment_index = 0;
+    public Person() {}
     public Person(String name, int weight) {
         this.name = name;
         this.weight = weight;
