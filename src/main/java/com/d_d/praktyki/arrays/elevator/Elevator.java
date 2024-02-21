@@ -33,4 +33,9 @@ public class Elevator {
         }
         System.out.println("Elevator going up!");
     }
+
+    public void clear() {
+        peopleCount = 0;
+        System.out.println("Elevator is empty.");
+    }
 }
