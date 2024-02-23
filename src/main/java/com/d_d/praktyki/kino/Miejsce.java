@@ -5,7 +5,7 @@ public class Miejsce {
     private int numerMiejsca;
     private boolean zajete = false;
 
-    private Miejsce() {}
+    protected Miejsce() {}
 
     public Miejsce(int rzad, int numerMiejsca) {
         this.rzad = rzad;

@@ -1,9 +1,10 @@
 package com.d_d.praktyki.kino;
 
-public class SalaKinowa /*extends Miejsce*/ {
+public class SalaKinowa extends Miejsce {
     private Miejsce[][] miejsca;
 
     public SalaKinowa(int rzedy, int miejscaWRzedzie) {
+        super();
         miejsca = new Miejsce[rzedy][miejscaWRzedzie];
 
         for (int y = 0; y < rzedy; y++) {
