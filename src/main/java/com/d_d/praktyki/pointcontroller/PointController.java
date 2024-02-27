@@ -1,4 +1,4 @@
-package com.d_d.praktyki.pointapplication;
+package com.d_d.praktyki.pointcontroller;
 
 public class PointController {
     public void moveLeft(Point point) {
