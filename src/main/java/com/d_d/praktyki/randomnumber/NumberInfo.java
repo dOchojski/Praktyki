@@ -16,7 +16,7 @@ public class NumberInfo {
 
     private static int generateRandomNumber() {
         Random random = new Random();
-        return random.nextInt(10000); 
+        return random.nextInt(10000);
     }
 
     private static void checkNumber(int number) {
