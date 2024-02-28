@@ -7,8 +7,8 @@ public class Product {
 
     public Product(String name, double cost, int quantity) {
         this.name = name;
-        this.cost = cost;
-        this.quantity = quantity;
+        setCost(cost);
+        setQuantity(quantity);
     }
 
     public void setName(String name) {
