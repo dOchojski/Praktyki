@@ -11,6 +11,20 @@ public class Person {
         this.age = age;
     }
 
+    public void greet() {
+        String text = "Witaj ";
+        if (name == null && surname == null)
+            text += "nieznajomy";
+        else if (name != null && surname != null)
+            text += name+" "+surname;
+        else if (surname == null)
+            text += name;
+        else // only surname
+            text += "panx "+surname;
+
+        System.out.println(text);
+    }
+
     public void setName(String name) {
         this.name = name;
     }
