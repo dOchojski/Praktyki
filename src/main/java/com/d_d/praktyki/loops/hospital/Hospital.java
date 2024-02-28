@@ -21,7 +21,7 @@ public class Hospital {
             final Patient patient = patients[i];
 
             // should entry end with comma or is it last element
-            String entryEnd = ((i - 1 != patientsCount) ? ", " : "\n");
+            String entryEnd = ((i + 1 != patientsCount) ? ", " : "\n");
 
             String entry = patient.getName() + " " + patient.getSurname() + entryEnd;
             System.out.print(entry);
