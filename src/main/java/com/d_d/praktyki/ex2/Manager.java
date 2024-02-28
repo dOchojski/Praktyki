@@ -17,9 +17,9 @@ class Manager extends Employee {
     @Override
     public String toString() {
         return "Manager{" +
-                "name='" + getName() + '\'' +
-                ", salary=" + getSalary() +
-                ", department='" + department + '\'' +
+                "imie='" + getName() + '\'' +
+                ", wypłata=" + getSalary() +
+                ", departament='" + department + '\'' +
                 '}';
     }
 }
