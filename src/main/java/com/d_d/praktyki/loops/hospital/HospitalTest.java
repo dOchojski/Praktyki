@@ -13,7 +13,7 @@ public class HospitalTest {
 
         while (isRunning) {
             String option = inputPrompt.prompt(
-                    "== Szpital =="
+                    "== Szpital ==" + "\n" +
                     "0 - wyjście z programu" + "\n" +
                     "1 - dopisywanie pacjenta" + "\n" +
                     "2 - wyświetlanie zapisanych pacjentów");
