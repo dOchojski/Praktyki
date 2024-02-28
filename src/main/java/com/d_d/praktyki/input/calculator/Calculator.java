@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Calculator {
     private static final Scanner input = new Scanner(System.in);
+    private static final InputPrompt inputPrompt = new InputPrompt(input);
 
     @FunctionalInterface
     private interface OperationInterface {
@@ -16,15 +17,12 @@ public class Calculator {
     }
 
     public static void prompt() {
-        System.out.println("Wprowadź liczbę A: ");
-        final double numberA = input.nextDouble();
+        final double numberA = inputPrompt.promptDouble("Wprowadź liczbę A: ", true);
 
-        System.out.println("Wprowadź operator [+, -, *, /]: ");
-        final String operator = input.next();
+        final String operator = inputPrompt.prompt("Wprowadź operator [+, -, *, /]: ");
         OperationInterface operation = getOperation(operator);
 
-        System.out.println("Wprowadź liczbę B: ");
-        final double numberB = input.nextDouble();
+        final double numberB = inputPrompt.promptDouble("Wprowadź liczbę B: ", true);
 
         Double result = operation.apply(numberA, numberB);
         System.out.println("Wynik: "+result);
