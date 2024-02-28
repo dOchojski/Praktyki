@@ -18,6 +18,7 @@ public class CoinFlip {
     private static final InputPrompt inputPrompt = new InputPrompt(new Scanner(System.in));
 
     public static void main(String[] args) {
+        flip();
     }
 
     public static void flip() {
