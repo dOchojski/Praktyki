@@ -35,12 +35,12 @@ public class Product {
 
     public void plusQuantity(int amount) {
         if (amount < 0) throw new IllegalArgumentException("Amount cannot be negative");
-        quantity += amount;
+        setQuantity(quantity + amount);
     }
 
     public void minusQuantity(int amount) {
         if (amount < 0) throw new IllegalArgumentException("Amount cannot be negative");
-        quantity -= amount;
+        setQuantity(quantity - amount);
     }
 
 
