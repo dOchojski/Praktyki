@@ -2,7 +2,6 @@ package com.d_d.praktyki.input.calculator;
 
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.function.Function;
 
 public class Calculator {
     private static final Scanner input = new Scanner(System.in);
@@ -22,12 +21,22 @@ public class Calculator {
 
         System.out.println("Wprowadź operator [+, -, *, /]: ");
         final String operator = input.next();
+        OperationInterface operation = getOperation(operator);
 
         System.out.println("Wprowadź liczbę B: ");
         final double numberB = input.nextDouble();
+
+        Double result = operation.apply(numberA, numberB);
+        System.out.println("Wynik: "+result);
     }
 
-    private static OperationInterface getOperation() {
-        return (a, b) -> a+b;
+    private static OperationInterface getOperation(String operator) {
+        return switch (operator) {
+            case "+" -> ((a,b) -> a+b);
+            case "-" -> ((a,b) -> a-b);
+            case "*" -> ((a,b) -> a*b);
+            case "/" -> ((a,b) -> a/b);
+            default -> throw new IllegalArgumentException("Unexpected operator: " + operator);
+        };
     }
 }
