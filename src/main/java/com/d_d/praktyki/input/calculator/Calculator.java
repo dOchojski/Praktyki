@@ -1,5 +1,7 @@
 package com.d_d.praktyki.input.calculator;
 
+import com.d_d.praktyki.input.InputPrompt;
+
 import java.util.Locale;
 import java.util.Scanner;
 

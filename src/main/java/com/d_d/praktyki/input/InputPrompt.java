@@ -1,4 +1,4 @@
-package com.d_d.praktyki.input.calculator;
+package com.d_d.praktyki.input;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
