@@ -26,6 +26,7 @@ public class HospitalTest {
                     addInMenu();
                     break;
                 case "2":
+                    hospital.printPatients();
                     break;
             }
         }
