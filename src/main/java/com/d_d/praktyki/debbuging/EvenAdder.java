@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class EvenAdder {
     public static void main(String[] args) {
         int[] array = createEvenArray(5);
-        reverseArray(array);
-        System.out.println(Arrays.toString(array));
+        int[] reversed = reverseArray(array);
+        System.out.println(Arrays.toString(reversed));
     }
 
     /**
@@ -17,11 +17,13 @@ public class EvenAdder {
     private static int[] createEvenArray(int size) {
         Scanner scanner = new Scanner(System.in);
         int[] result = new int[size];
-        for (int i = 0; i < result.length; i++) {
+        for (int i = 0; i < result.length;) {
             System.out.println("Podaj kolejną liczbę: ");
             int next = scanner.nextInt();
-            if (isEven(next))
-                next = result[i];
+            if (isEven(next)) {
+                result[i] = next;
+                i++;
+            }
         }
         return result;
     }
@@ -31,7 +33,7 @@ public class EvenAdder {
      * @return true if number is even, or false otherwise
      */
     private static boolean isEven(int number) {
-        return number == 0;
+        return number % 2 == 0;
     }
 
     /**
@@ -41,7 +43,7 @@ public class EvenAdder {
     private static int[] reverseArray(int[] array) {
         int[] reversed = new int[array.length];
         for (int i = 0; i < reversed.length; i++) {
-            array[i] = reversed[i];
+            reversed[i] = array[reversed.length-i-1];
         }
         return reversed;
     }
