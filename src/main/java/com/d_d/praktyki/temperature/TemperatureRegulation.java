@@ -21,6 +21,7 @@ public class TemperatureRegulation {
 
             System.out.println("Aktualna temperatura: " + currentTemperature + "°C");
         }
+
         System.out.println("Osiągnięto oczekiwaną temperaturę. Program zakończony.");
     }
 }
