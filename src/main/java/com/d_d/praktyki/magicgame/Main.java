@@ -8,13 +8,13 @@ import com.d_d.praktyki.magicgame.graphics.Display;
 import java.util.Scanner;
 
 public class Main {
-    private static BorderedDisplay gameDisplay = new BorderedDisplay(50, 20);
-
-    private static BorderedDisplay tasksDisplay = new BorderedDisplay(50, 5);
-
-    private static GameLogic gameLogic = new GameLogic(50, 20);
-
     private static DotController controller;
+
+    private static BorderedDisplay gameDisplay = new BorderedDisplay(20, 10);
+
+    private static BorderedDisplay tasksDisplay = new BorderedDisplay(20, 2);
+
+    private static GameLogic gameLogic;
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -30,7 +30,7 @@ public class Main {
     private static void onUpdate() {
         String input = scanner.next();
         controller.handleInput(input);
-        gameLogic.startRound(controller.getDot());
+        gameLogic.onUpdate();
     }
 
     private static void onRender() {
@@ -42,6 +42,8 @@ public class Main {
         Dot character = new Dot();
         gameDisplay.objects.add(character);
         controller = new DotController(character);
+        gameLogic = new GameLogic(gameDisplay, controller);
+        gameLogic.startRound();
     }
 
     private static void onGameLoop() {

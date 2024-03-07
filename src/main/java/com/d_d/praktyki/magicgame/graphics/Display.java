@@ -41,4 +41,12 @@ public class Display {
             }
         }
     }
+
+    public int getTotalWidth() {
+        return width;
+    }
+
+    public int getTotalHeight() {
+        return height;
+    }
 }
