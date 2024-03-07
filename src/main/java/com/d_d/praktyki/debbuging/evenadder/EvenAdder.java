@@ -1,4 +1,4 @@
-package com.d_d.praktyki.debbuging;
+package com.d_d.praktyki.debbuging.evenadder;
 
 import java.util.Arrays;
 import java.util.Scanner;
