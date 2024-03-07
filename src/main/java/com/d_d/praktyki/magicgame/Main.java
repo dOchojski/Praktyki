@@ -2,12 +2,13 @@ package com.d_d.praktyki.magicgame;
 
 import com.d_d.praktyki.magicgame.elements.Dot;
 import com.d_d.praktyki.magicgame.elements.DotController;
+import com.d_d.praktyki.magicgame.graphics.BorderedDisplay;
 import com.d_d.praktyki.magicgame.graphics.Display;
 
 import java.util.Scanner;
 
 public class Main {
-    private static Display gameDisplay = new Display(50, 20);
+    private static BorderedDisplay gameDisplay = new BorderedDisplay(50, 20);
 
     private static DotController controller;
 
