@@ -14,7 +14,7 @@ public class User {
     }
 
     public static void main(String[] args) {
-        User user = null;
+        User user = new User("Adam", 50);
         user.printUserInfo();
     }
 }
