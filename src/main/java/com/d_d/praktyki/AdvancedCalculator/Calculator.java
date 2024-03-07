@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Calculator {
     private final Scanner input = new Scanner(System.in);
-    public double Input(){
+    public double input(){
         double number;
         number = input.nextDouble();
         return number;
     }
-    public double Operation(double a, double b){
+    public double operation(double a, double b){
         double equal;
         System.out.println("Podaj symbol matematyczny(+,-,*,/):");
         char symbol= input.next().charAt(0);
@@ -31,19 +31,20 @@ public class Calculator {
         }
     }
     public double add(double a, double b){
-        System.out.println("Wynik dodawania: ");
         return a+b;
     }
     public  double substract(double a, double b){
-        System.out.println("Wynik odejmowania: ");
         return a-b;
     }
     public double multiply(double a, double b){
-        System.out.println("Wynik mnożenia: ");
         return a*b;
     }
     public double divide(double a, double b){
-        System.out.println("Wynik dzielenia: ");
-        return a/b;
+        if(b!=0) {
+            return a / b;
+        }else{
+            System.out.println("Error");
+            return 0;
+        }
     }
 }

@@ -5,11 +5,11 @@ public class CalculatorTest {
         double a,b,c;
         Calculator calc = new Calculator();
         System.out.println("Podaj pierwszą liczbę: ");
-        a = calc.Input();
+        a = calc.input();
         System.out.println("Podaj drugą liczbę: ");
-        b = calc.Input();
+        b = calc.input();
 
-        c = calc.Operation(a, b);
-        System.out.println(c);
+        c = calc.operation(a, b);
+        System.out.println("Wwynik: " + c);
     }
 }
