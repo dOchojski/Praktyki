@@ -10,6 +10,10 @@ import java.util.Scanner;
 public class Main {
     private static BorderedDisplay gameDisplay = new BorderedDisplay(50, 20);
 
+    private static BorderedDisplay tasksDisplay = new BorderedDisplay(50, 5);
+
+    private static GameLogic gameLogic = new GameLogic(50, 20);
+
     private static DotController controller;
 
     private static final Scanner scanner = new Scanner(System.in);
@@ -26,10 +30,12 @@ public class Main {
     private static void onUpdate() {
         String input = scanner.next();
         controller.handleInput(input);
+        gameLogic.startRound(controller.getDot());
     }
 
     private static void onRender() {
         gameDisplay.displayFrame();
+        tasksDisplay.displayFrame();
     }
 
     private static void onSetup() {

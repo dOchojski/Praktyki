@@ -12,4 +12,12 @@ public class DotController {
         if (key == 's') dot.position[1] += 1 * dot.getSpeed();
         if (key == 'a') dot.position[0] -= 1 * dot.getSpeed();
     }
+
+    public Dot getDot() {
+        return dot;
+    }
+
+    public void setDot(Dot dot) {
+        this.dot = dot;
+    }
 }

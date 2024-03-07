@@ -27,7 +27,16 @@ public class Dot implements Displayable {
     public void onDraw(char frame[][]) {
         frame[position[1]][position[0]] = symbol;
     }
+
     public int getSpeed() {
         return baseSpeed;
+    }
+
+    public int[] getPosition() {
+        return position;
+    }
+
+    public void setPosition(int[] position) {
+        this.position = position;
     }
 }
