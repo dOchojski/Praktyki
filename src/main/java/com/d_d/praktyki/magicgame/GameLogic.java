@@ -3,6 +3,7 @@ package com.d_d.praktyki.magicgame;
 import com.d_d.praktyki.magicgame.elements.Dot;
 import com.d_d.praktyki.magicgame.elements.DotController;
 import com.d_d.praktyki.magicgame.elements.Ingredient;
+import com.d_d.praktyki.magicgame.elements.Text;
 import com.d_d.praktyki.magicgame.graphics.Display;
 
 import java.util.ArrayList;
@@ -28,16 +29,25 @@ public class GameLogic {
     private static Random random = new Random();
 
     private Display gameDisplay;
+    private Display tasksDisplay;
 
     private int round = 0;
 
-    public GameLogic(Display gameDisplay, DotController controller) {
+    public GameLogic(Display gameDisplay, Display tasksDisplay, DotController controller) {
         this.gameDisplay = gameDisplay;
+        this.tasksDisplay = tasksDisplay;
         this.controller = controller;
     }
 
     public void onUpdate() {
-        onIngredientUpdate();
+        while(true) {
+            onTasksUpdate();
+            onIngredientUpdate();
+            if (ingredients.isEmpty()) {
+                endRound();
+                startRound();
+            } else break;
+        };
     }
 
     private void onIngredientUpdate() {
@@ -52,16 +62,29 @@ public class GameLogic {
                 }).findFirst();
 
         if (foundIngredient.isPresent()) {
-            System.out.println("Item picked up!");
+            System.out.printf("%s picked up!\n", foundIngredient.get().getName());
+            onRemoveIngredient(foundIngredient.get());
         }
+    }
+
+    private void onTasksUpdate() {
+        tasksDisplay.clear();
+        char[] ingredientsToPickUp = new char[ingredients.size()];
+        for (int i = 0; i < ingredients.size(); i++) {
+            ingredientsToPickUp[i] = ingredients.get(i).getSymbol();
+        }
+
+        Text toPickUp = new Text(null, 1, 1);
+        String sprites = new String(ingredientsToPickUp);
+        toPickUp.setContent("LEFT:".concat(sprites));
+        tasksDisplay.objects.add(toPickUp);
     }
 
     public void startRound() {
         Dot previousDot = controller.getDot();
         for (int i = 0; i < Math.log1p(3*round)+1; i++) {
             Ingredient ingredient = createIngredient();
-            ingredients.add(ingredient);
-            gameDisplay.objects.add(ingredient);
+            onAddIngredient(ingredient);
 
             System.out.println(getDistance(previousDot, ingredient));
             previousDot = ingredient;
@@ -79,8 +102,17 @@ public class GameLogic {
         return randomIngredient;
     }
 
+    private void onAddIngredient(Ingredient ingredient) {
+        ingredients.add(ingredient);
+        gameDisplay.objects.add(ingredient);
+    }
+
+    private void onRemoveIngredient(Ingredient ingredient) {
+        ingredients.remove(ingredient);
+        gameDisplay.objects.remove(ingredient);
+    }
+
     public void endRound() {
-        ingredients.clear();
         round++;
     }
 

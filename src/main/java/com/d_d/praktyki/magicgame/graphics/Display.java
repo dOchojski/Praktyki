@@ -34,12 +34,16 @@ public class Display {
             System.out.println(frame[i]);
         }
     }
-    private void fillWithEmpty() {
+    protected void fillWithEmpty() {
         for(int i=0; i<height; i++) {
             for (int j=0; j<width; j++) {
                 objects.add(new Empty(new int[]{j, i}));
             }
         }
+    }
+
+    public void clear() {
+        objects.clear();
     }
 
     public int getTotalWidth() {
