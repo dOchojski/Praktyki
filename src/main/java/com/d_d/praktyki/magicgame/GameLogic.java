@@ -73,8 +73,6 @@ public class GameLogic {
     }
 
     private void onIngredientUpdate() {
-        // todo rare case scenario: items overlap each other and you can't just take first one
-        // todo another scenario: player is on item already, this shall not happen!
         Optional<Ingredient> foundIngredient = ingredients.stream()
                 .filter(ingredient -> {
                     int[] characterPosition = controller.getDot().getPosition();
@@ -111,12 +109,21 @@ public class GameLogic {
         currentMoves = 0;
         Dot previousDot = controller.getDot();
         int movesSum = 0;
-        for (int i = 0; i < Math.log1p(3*round)+1; i++) {
+        for (int i = 0; i < Math.log1p(3*round)+1;) {
             Ingredient ingredient = createIngredient();
+            // if on the same position as previous ingredients - reroll ingredient
+            boolean isOnOccupied = ingredients.stream()
+                    .anyMatch(previous -> Arrays.equals(previous.getPosition(), ingredient.getPosition()));
+            // or if it is on position of character
+            isOnOccupied |= Arrays.equals(controller.getDot().getPosition(), ingredient.getPosition());
+            if (isOnOccupied)
+                continue;
+
             onAddIngredient(ingredient);
 
             movesSum += getDistance(previousDot, ingredient);
             previousDot = ingredient;
+            i++;
         }
         maxMoves = movesSum;
     }
