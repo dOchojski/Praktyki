@@ -42,15 +42,34 @@ public class GameLogic {
         this.controller = controller;
     }
 
-    public void onUpdate() {
-        while(true) {
-            onTasksUpdate();
+    public boolean onUpdate() {
+        boolean shouldLoop;
+        do {
+            shouldLoop = false;
             onIngredientUpdate();
+            onTasksUpdate();
             if (ingredients.isEmpty()) {
                 endRound();
                 startRound();
-            } else break;
-        };
+                shouldLoop = true;
+            }
+            if (!onMovesUpdate()) return false;
+        } while(shouldLoop);
+
+        return true;
+    }
+
+    private boolean onMovesUpdate() {
+        int gameOverMoves = 3+maxMoves;
+        if (currentMoves >= gameOverMoves) {
+            System.out.println("Game is Over!");
+            return false;
+        }
+        else if (currentMoves >= maxMoves) {
+            System.out.println("Out of moves!");
+            System.out.println("Last %d move(s).".formatted(gameOverMoves-currentMoves));
+        }
+        return true;
     }
 
     private void onIngredientUpdate() {
@@ -89,6 +108,7 @@ public class GameLogic {
     }
 
     public void startRound() {
+        currentMoves = 0;
         Dot previousDot = controller.getDot();
         int movesSum = 0;
         for (int i = 0; i < Math.log1p(3*round)+1; i++) {
@@ -99,6 +119,10 @@ public class GameLogic {
             previousDot = ingredient;
         }
         maxMoves = movesSum;
+    }
+
+    public void onEndOfTurn() {
+        currentMoves++;
     }
 
     private Ingredient createIngredient() {

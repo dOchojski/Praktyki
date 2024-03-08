@@ -21,6 +21,7 @@ public class Main {
     private static boolean isRunning = true;
 
     public static void main(String[] args) {
+        System.out.println("(wasd to move)");
         onSetup();
         while (isRunning) {
             onGameLoop();
@@ -28,12 +29,15 @@ public class Main {
     }
 
     private static void onUpdate() {
-        gameLogic.onUpdate();
+        if (!gameLogic.onUpdate()) {
+            System.exit(0);
+        }
     }
 
     private static void onInput() {
         String input = scanner.next();
         controller.handleInput(input);
+        gameLogic.onEndOfTurn();
     }
 
     private static void onRender() {
