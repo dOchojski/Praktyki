@@ -33,6 +33,9 @@ public class GameLogic {
 
     private int round = 0;
 
+    private int maxMoves = 0;
+    private int currentMoves = 0;
+
     public GameLogic(Display gameDisplay, Display tasksDisplay, DotController controller) {
         this.gameDisplay = gameDisplay;
         this.tasksDisplay = tasksDisplay;
@@ -78,17 +81,24 @@ public class GameLogic {
         String sprites = new String(ingredientsToPickUp);
         toPickUp.setContent("LEFT:".concat(sprites));
         tasksDisplay.objects.add(toPickUp);
+
+        String movesStr = "(%d)".formatted(maxMoves);
+        Text moves = new Text(null, tasksDisplay.getTotalWidth()-1-movesStr.length(), 1);
+        moves.setContent(movesStr);
+        tasksDisplay.objects.add(moves);
     }
 
     public void startRound() {
         Dot previousDot = controller.getDot();
+        int movesSum = 0;
         for (int i = 0; i < Math.log1p(3*round)+1; i++) {
             Ingredient ingredient = createIngredient();
             onAddIngredient(ingredient);
 
-            System.out.println(getDistance(previousDot, ingredient));
+            movesSum += getDistance(previousDot, ingredient);
             previousDot = ingredient;
         }
+        maxMoves = movesSum;
     }
 
     private Ingredient createIngredient() {
