@@ -21,7 +21,14 @@ public class Main {
         for (int i = 0; i < amount; i++) {
             int x2 = rand.nextInt(11);
             int y2 = rand.nextInt(11);
-            arr[y2][x2] = 'X';
+            int type = rand.nextInt(3);
+            if(type==0) {
+                arr[y2][x2] = 'X';
+            } else if (type==1) {
+                arr[y2][x2] = 'V';
+            }else if(type==2){
+                arr[y2][x2] = 'A';
+            }
         }
             arr[y][x] = 'T';
             int moves = 0;
@@ -31,16 +38,20 @@ public class Main {
                         arr[i][7] + " " + arr[i][8] + " " + arr[i][9] + " " + arr[i][10]);
             }
 
-
-            System.out.println("X= Surowce\nT= Twoja postać\n 0= Puste pola");
+            System.out.println("Podaj ile ruchów potrzebujesz do wykonania tej gry.");
+            int moveLimit= MagicGame.Moves();
+            System.out.println("X,V,A= Surowce\nT= Twoja postać\n 0= Puste pola");
             while (true) {
                 amount= MagicGame.check(arr,11,11);
 
                 if(amount==0){
                     System.out.println("Zdobyłeś wszystkie surowce.");
                     break;
-                }else{}
-
+                }
+                if(moveLimit<moves){
+                    System.out.println("Koniec gry twój limit ruchów się skończył.");
+                    break;
+                }
                 System.out.println("Musisz zebrać aż " + amount +" surowców. \nPodaj kierunek ruchu\n1-Lewo\n" +
                         "2-Góra\n5-Dół\n6-Prawo\n0-Zobacz liczbę korków które zrobiłeś");
 
