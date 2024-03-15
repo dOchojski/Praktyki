@@ -3,24 +3,32 @@ package com.d_d.praktyki.systemrezerwacjipokoihotelowych;
 import java.util.*;
 
 public class HotelReservationSystem {
+    // Pole przechowujące mapę pokoi
     private Map<Integer, Room> rooms;
+    // Pole przechowujące mapę rezerwacji
     private Map<Integer, Reservation> reservations;
+    // Pole przechowujące kolejny numer identyfikacyjny rezerwacji
     private int nextReservationId;
 
+    // Konstruktor klasy HotelReservationSystem
     public HotelReservationSystem() {
+        // Inicjalizacja pól
         this.rooms = new HashMap<>();
         this.reservations = new HashMap<>();
         this.nextReservationId = 1;
     }
 
+    // Metoda dodająca pokój do systemu
     public void addRoom(int roomId, int beds, double price, Set<String> amenities) {
         rooms.put(roomId, new Room(roomId, beds, price, amenities));
     }
 
+    // Metoda usuwająca pokój z systemu
     public void removeRoom(int roomId) {
         rooms.remove(roomId);
     }
 
+    // Metoda edytująca informacje o pokoju
     public void editRoom(int roomId, int beds, double price, Set<String> amenities) {
         Room room = rooms.get(roomId);
         if (room != null) {
@@ -30,6 +38,7 @@ public class HotelReservationSystem {
         }
     }
 
+    // Metoda dokonująca rezerwacji pokoju
     public void makeReservation(int roomId, String guestName, Date checkInDate, Date checkOutDate) {
         Room room = rooms.get(roomId);
         if (room != null && !room.isReserved()) {
@@ -42,6 +51,7 @@ public class HotelReservationSystem {
         }
     }
 
+    // Metoda anulująca rezerwację
     public void cancelReservation(int reservationId) {
         Reservation reservation = reservations.get(reservationId);
         if (reservation != null) {
@@ -56,6 +66,7 @@ public class HotelReservationSystem {
         }
     }
 
+    // Metoda wyświetlająca aktywne rezerwacje
     public void displayReservations() {
         System.out.println("Active Reservations:");
         for (Reservation reservation : reservations.values()) {
@@ -63,7 +74,13 @@ public class HotelReservationSystem {
         }
     }
 
+    // Metoda zwracająca kolekcję pokoi
     public Collection<Room> getRooms() {
         return rooms.values();
     }
 }
+
+
+
+
+
