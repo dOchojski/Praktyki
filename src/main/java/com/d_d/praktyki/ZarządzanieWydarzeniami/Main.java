@@ -9,13 +9,12 @@ public class Main {
     public static void main(String[] args) throws ParseException {
         Scanner scanner = new Scanner(System.in);
         EventManager eventManager = new EventManager();
-        Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
         while (true) {
             System.out.println("Dostępne opcje:");
             System.out.println("1-Dodanie nowego wydarzenia\n2-Dodanie uczstnika do wydarzenia" +
-                    "\n3-Usunięcie uczestnika\n4-Pokazanie wydarzenia\n5-Wyświtl Szczegóły wydarzenia");
+                    "\n3-Usunięcie uczestnika\n4-Pokazanie wydarzenia\n5-Wyświetl Szczegóły wydarzenia\n6-Usuń wydarzenie");
             int choice = scanner.nextInt();
             if (choice==1) {
 
@@ -85,6 +84,19 @@ public class Main {
                 int eventId = scanner.nextInt();
                 scanner.nextLine();
                 EventManager.displayEventDetails(eventId);
+
+            }else if(choice==6){
+                System.out.println("Podaj identyfikator wydarzenia do usunięcia:");
+                int eventId = scanner.nextInt();
+                scanner.nextLine();
+                Event event = EventManager.getEventById(eventId);
+                if (event != null) {
+                    eventManager.removeEvent(eventId);
+                    System.out.println("Usunięto wydarzenie.");
+                } else {
+                    System.out.println("Wydarzenie o podanym identyfikatorze nie istnieje.");
+                }
+                
             }
         }
 

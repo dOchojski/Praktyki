@@ -48,7 +48,6 @@ class Event {
         return participants;
     }
 
-
     public void addParticipant(Participant participant) {
         participants.add(participant);
     }

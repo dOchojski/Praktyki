@@ -18,6 +18,10 @@ public class EventManager {
         events.add(event);
     }
 
+    public void removeEvent(int eventId) {
+        events.removeIf(p -> p.getId() == eventId);
+    }
+
     public void addParticipant(Event event, Participant participant) {
         event.addParticipant(participant);
     }
@@ -53,8 +57,6 @@ public class EventManager {
                 System.out.println("Id: "+ event.getId());
                 System.out.println("Nazwa: " + event.getName());
                 System.out.println("Data: " + sdf.format(event.getDate()));
-                System.out.println("Miejsce: " + event.getLocation());
-                System.out.println("Opis: " + event.getDescription());
                 System.out.println();
             }
         }
@@ -64,18 +66,19 @@ public class EventManager {
     }
 
     public static void displayEventDetails(int eventId){
-
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Event event = getEventById(eventId);
         if (event != null) {
             System.out.println("Szczegóły wydarzenia:");
             System.out.println("Nazwa: " + event.getName());
-            System.out.println("Data: " + event.getDate());
+            System.out.println("Data: " + sdf.format(event.getDate()));
             System.out.println("Miejsce: " + event.getLocation());
             System.out.println("Opis: " + event.getDescription());
             System.out.println("Lista uczestników:");
             for (Participant participant : event.getParticipants()) {
                 System.out.println("- " + participant.getName());
             }
+            System.out.println();
         } else {
             System.out.println("Wydarzenie o podanym identyfikatorze nie istnieje.");
         }
