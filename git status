@@ -1,0 +1,341 @@
+[33mcommit c1d02e64682f791df354006dc493d1db31aeaa3a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdKijko[m[33m, [m[1;31morigin/dKijko[m[33m)[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Mar 28 13:20:41 2025 +0100
+
+    Tablice
+
+[33mcommit 4db157b1653cf63e54204c4c64bd801778a67dd2[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Mar 28 12:54:08 2025 +0100
+
+    Pętle
+
+[33mcommit a2ce0bb7752e90f4a9e41dca098bcb0e60c93d20[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Mar 28 12:18:33 2025 +0100
+
+    Instrukcje warunkowe
+
+[33mcommit 2812f98dd611c01ffa5fff53b72320f8102f47c3[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Mar 28 11:50:11 2025 +0100
+
+    Operatory
+
+[33mcommit 978ea12f05c55455139749af51be63ed651b657d[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Mar 28 10:33:48 2025 +0100
+
+    Typy danych, podstawy składni
+
+[33mcommit c5fbfa78dbfdedc7c2e1aac68f4733ed2a97d2d8[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Mar 15 09:18:04 2024 +0100
+
+    Zarządzanie wydarzeniami - skończone
+
+[33mcommit 135a2b9599a66fd683aafaa2eeee9c789df81b94[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Thu Mar 14 08:57:23 2024 +0100
+
+    Gra Magiczna zakończona
+
+[33mcommit dfdeffeeafaeadf269393ebbf2a0cd5395b634e8[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Mar 13 13:18:07 2024 +0100
+
+    Zarządzanie wydarzenia
+
+[33mcommit 9fb60344818c47dab36a113bf9425d7abb2536c9[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Mar 8 13:58:48 2024 +0100
+
+    Gra Magiczna - not fully finished
+
+[33mcommit 6feb71fcb01377fafd73cb7cf4bf8de2a5af8a8b[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Thu Mar 7 12:14:24 2024 +0100
+
+    Vehicle
+
+[33mcommit df90487a15674c59cdf6c4364f91d11d99fd6c07[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Thu Mar 7 08:59:33 2024 +0100
+
+    Kalkulator poprawiony
+
+[33mcommit 674c50d209262cbc86ff4015b16c26021560afa0[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Thu Mar 7 08:54:55 2024 +0100
+
+    User - Debugowanie Zrobione
+
+[33mcommit c151309e3f85145ec828fdeeb1385080a7101640[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Thu Mar 7 08:45:04 2024 +0100
+
+    User - Debugowanie
+
+[33mcommit 83c0fde6e94850e61d05d6afa8a3aee8d4609f97[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Thu Mar 7 08:28:45 2024 +0100
+
+    Dodawanie Uczestników
+
+[33mcommit b2dff4d6351ec846acad5965b54407b1e995d320[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Tue Mar 5 12:01:46 2024 +0100
+
+    Debugowanie
+
+[33mcommit bcf737b8ba3395b010fe02df4d3fef91903930e5[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Tue Mar 5 11:10:23 2024 +0100
+
+    Sortowanie Bąbelkowe
+
+[33mcommit c7323afc0cbda557388839c8bebd08ba92a5de38[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Tue Mar 5 09:23:50 2024 +0100
+
+    Kursy
+
+[33mcommit 3a68913bca476a2c26e0de6547f3870b55135300[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Tue Mar 5 08:41:44 2024 +0100
+
+    Hurtownia
+
+[33mcommit cb3e38db92e46ad7820a1c8d04534059e1b0518e[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Mon Mar 4 14:43:44 2024 +0100
+
+    Multiplication
+
+[33mcommit 7083c607cc1307ff86f4fe6ad9f49f9018d02348[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Mon Mar 4 13:38:35 2024 +0100
+
+    Algorytmika - numery
+
+[33mcommit e1669d1fe5e357f79a5de720909ea341e93340cc[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Mar 1 12:03:47 2024 +0100
+
+    Temperatura
+
+[33mcommit 478b9b2c09224aee5b3f441d084f6f36a20e9c57[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Mar 1 10:47:22 2024 +0100
+
+    Szpital
+
+[33mcommit a068d9c7a9bec748ceea96fd0b8cfc7ee8cc450e[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Thu Feb 29 12:10:51 2024 +0100
+
+    Suma Liczb - pętla
+
+[33mcommit e519fdb8b51e3fbacaeee384a6e480072f77b785[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Thu Feb 29 09:26:06 2024 +0100
+
+    Rzut Monetą
+
+[33mcommit aa944dcec71a3bcb11350d988bfbcc40de0ace18[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 28 14:59:02 2024 +0100
+
+    Kalkulator v3
+
+[33mcommit d7a6f28d32a1b2750f96acea9154abc99b1d2856[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 28 13:05:20 2024 +0100
+
+    Książka
+
+[33mcommit 5d74d86b6222c44d9419b6a827a59d2de50fc289[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 28 12:38:17 2024 +0100
+
+    Samochód
+
+[33mcommit dbea023070be79c37362eee145005d7ce5b926a2[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 28 12:05:17 2024 +0100
+
+    Konto Bankowe - Dokończone
+
+[33mcommit 84b01d79da85dc0aefc6c77f0dfb8ab5d4808c49[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 28 11:58:50 2024 +0100
+
+    Konto Bankowe
+
+[33mcommit 95d72aa1a88308048ae2db767d500ba5dfff7781[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 28 11:40:42 2024 +0100
+
+    Produkt
+
+[33mcommit 18a643472503c24cadd5185933987cb9e1b6ae00[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 28 10:24:41 2024 +0100
+
+    Osoba
+
+[33mcommit d47671d187eb92ed52d8ae7f5bf63f1b982327d5[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 28 09:55:59 2024 +0100
+
+    Client - Ćwiczenie
+
+[33mcommit 3dbb3437507fec6c63c9757be10fffe6abed9d7b[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 28 09:09:18 2024 +0100
+
+    Wydarzenia - Naprawienie błędu
+
+[33mcommit 474e090d5868565ac0a80833d39a7092ea70d614[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 28 08:52:56 2024 +0100
+
+    Wydarzenia - Dodawanie Wydarzeń
+
+[33mcommit f7feecf81f2f37589d44e5699a4e84eb95315304[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Mon Feb 26 11:33:42 2024 +0100
+
+    Numery
+
+[33mcommit faa56aa9bc3fd2d24459f0bcd697ef8220fcad8c[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Mon Feb 26 09:56:52 2024 +0100
+
+    Zwierzęta
+
+[33mcommit 96291ecf11f86e3ead1c70a01225fbe1a0783447[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Feb 23 13:31:50 2024 +0100
+
+    Employees
+
+[33mcommit 3b367b055eaa85ec377aced2af46c3e6ac0caaa9[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Feb 23 11:24:55 2024 +0100
+
+    Kino
+
+[33mcommit 73be31772d2ec46c0944c72b9cda6b42c1f1985e[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Feb 23 10:46:59 2024 +0100
+
+    First Week
+
+[33mcommit b742db0db3e278b76d17df018fa2140e94467daf[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Fri Feb 23 08:28:20 2024 +0100
+
+    Multidimensional Array
+
+[33mcommit 7e39ba1eadcd41b4cfcf6864cc7be586379b6b6e[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Thu Feb 22 14:48:22 2024 +0100
+
+    Elevator
+
+[33mcommit 62f245b1433fc6c5fc6361cc51f7b26e2f7b8d48[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Thu Feb 22 09:41:53 2024 +0100
+
+    Arrays Sum
+
+[33mcommit f20c78cec610fd73b4fc5c63d53a16831a551a87[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 21 19:18:35 2024 +0100
+
+    PointControl
+
+[33mcommit ce735f41740474b171df3634fc75e974be80b018[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 21 17:21:56 2024 +0100
+
+    NumberCheck
+
+[33mcommit d29c5948b11f9ed307e48e22becb2c7f977683e5[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 21 16:02:35 2024 +0100
+
+    GuessNumber
+
+[33mcommit 50b08952c589deb70a67c6514c82c0d8a22512fe[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 21 15:17:50 2024 +0100
+
+    Calculator v2
+
+[33mcommit 9549149d70856c7af76570db9e70e57f41af62a3[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 21 12:24:40 2024 +0100
+
+    EvenNumbers
+
+[33mcommit edf67007d5cf5200793c87a29c46367549c2b4f3[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 21 12:02:42 2024 +0100
+
+    PasswordCheck
+
+[33mcommit 176cb605625b83f8316db5581292b4293ddea945[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 21 09:55:30 2024 +0100
+
+    AverageMark
+
+[33mcommit f6435796ba6f91effa6d5c261b18885e61a0520a[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Wed Feb 21 09:34:10 2024 +0100
+
+    Dice
+
+[33mcommit 75a4cca6c4b32690178c49d59ee6e8fd3a695b26[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Tue Feb 20 12:50:33 2024 +0100
+
+    Calulator
+
+[33mcommit 6d5faf5014a5bd2cfe7dc5a26b9e2d9e81013e85[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Tue Feb 20 10:28:55 2024 +0100
+
+    Agregacja i dodanie klas do packagów
+
+[33mcommit 92a577ddcb24eaefd094e7e2fbe582814b77ab73[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Mon Feb 19 13:53:46 2024 +0100
+
+    Klasy i Obiekty - Zaawansowane
+
+[33mcommit 80e3e3d18cacde22f3b77767e013563b108003e5[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Mon Feb 19 13:32:09 2024 +0100
+
+    Operacje na obiektach
+
+[33mcommit 1107486ae81a52954a826c2c85f78d63d303af68[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Mon Feb 19 13:22:13 2024 +0100
+
+    Klasy i Obiekty
+
+[33mcommit 4c756ff7a23e4334be4d7424695353c86b86d909[m
+Author: Holmynik <dominikkijko4@gmail.com>
+Date:   Mon Feb 19 12:49:38 2024 +0100
+
+    Typy Danych
+
+[33mcommit f0ab1de85d0b77edb5bb3326d27ec16f30687158[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: dOchojski <daniel.ochojski.25.10@gmail.com>
+Date:   Fri Jan 19 10:10:03 2024 +0100
+
+    add
